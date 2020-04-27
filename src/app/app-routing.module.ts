@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'todo',
     loadChildren: () => import('./pages/todo/todo.module').then((mod) => mod.TodoModule)
+  },
+  {
+    path: 'result-pages',
+    loadChildren: () => import('./pages/result-pages/result-pages.module').then((mod) => mod.ResultPagesModule)
   }
 ];
 
