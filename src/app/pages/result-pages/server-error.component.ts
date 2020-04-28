@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
     </nz-result>
   `
 })
-export class ResultErrorComponent implements OnInit {
+export class ServerErrorComponent implements OnInit {
 
   constructor() { }
 

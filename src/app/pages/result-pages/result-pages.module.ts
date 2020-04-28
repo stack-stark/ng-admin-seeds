@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResultPagesRoutingModule } from './result-pages-routing.module';
-import { ResultErrorComponent } from './result-error.component';
+import { ServerErrorComponent } from './server-error.component';
 import { NzResultModule } from 'ng-zorro-antd';
 import { ForbiddenComponent } from './forbidden.component';
 import { NotFoundComponent } from './not-found.component';
+import { ErrorFeedbackComponent } from './error-feedback.component';
 
 @NgModule({
-  declarations: [ResultErrorComponent, ForbiddenComponent, NotFoundComponent],
+  declarations: [ServerErrorComponent, ForbiddenComponent, NotFoundComponent, ErrorFeedbackComponent],
   imports: [
     CommonModule,
     ResultPagesRoutingModule,
