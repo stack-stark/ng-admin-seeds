@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/todo/todo.module').then((mod) => mod.TodoModule)
   },
   {
-    path: 'result-pages',
+    path: 'error',
     loadChildren: () => import('./pages/result-pages/result-pages.module').then((mod) => mod.ResultPagesModule)
   }
 ];
