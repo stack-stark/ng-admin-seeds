@@ -15,6 +15,7 @@ import { AppStoreModule } from './store/app-store.module';
 import { AuthInterceptor } from './core/authInterceptor';
 import { NzLayoutModule, NzMenuModule } from 'ng-zorro-antd';
 import { DesktopComponent } from './layout/desktop/desktop.component';
+import { SharedModule } from './shared';
 
 registerLocaleData(zh);
 
@@ -33,6 +34,7 @@ registerLocaleData(zh);
     AppStoreModule,
     NzLayoutModule,
     NzMenuModule,
+    SharedModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: zh_CN },
