@@ -7,7 +7,7 @@
 @ngrx/store | ^9.1.0
 ng-zorro-antd | ^9.1.0
 lodash | ^4.17.15
-
+@antv/g2plot | ^1.0.4
 ### 运行
 ``` bash
 npm i
