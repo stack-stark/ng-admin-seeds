@@ -7,4 +7,4 @@ export interface UserType {
 }
 
 export const userLogin = createAction('[user login]', props<{ user: UserType }>());
-export const userLogout = createAction('[user logout]', props<{ user: UserType }>());
+export const userLogout = createAction('[user logout]');

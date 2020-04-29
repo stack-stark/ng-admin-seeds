@@ -20,8 +20,11 @@ const reducer = createReducer(
   on(userLogin, (state, { user }) => {
     return { userInfo: { name: user.name, id: user.id, token: user.token } };
   }),
-  on(userLogout, (state, { user }) => {
-    return { userInfo: {} };
+  on(userLogout, (state) => {
+    return { userInfo: {
+      name: null,
+      id: null,
+      token: null} };
   })
 );
 
