@@ -23,12 +23,12 @@ export class AuthService {
 
   /**
    * 模拟登陆
-   * @param name 
-   * @param id 
+   * @param name
+   * @param id
    */
   login(name: string, id: number): boolean {
     const token = this.getToken(name, id);
-    this.store.dispatch(userLogin({ user: { name: name, id: id, token: ''} }));
+    this.store.dispatch(userLogin({ user: { name, id, token} }));
     return true;
   }
 
@@ -38,8 +38,8 @@ export class AuthService {
 
   /**
    * 模拟获取token
-   * @param name 
-   * @param id 
+   * @param name
+   * @param id
    */
   private getToken(name: string, id: number) {
     return name + id + new Date().getTime();

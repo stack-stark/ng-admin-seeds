@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login-routing.module';
 import { NzFormModule } from 'ng-zorro-antd/form';
-import { NzButtonModule, NzInputModule } from 'ng-zorro-antd';
+import { NzButtonModule, NzInputModule, NzGridModule, NzCheckboxModule, NzIconModule } from 'ng-zorro-antd';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -16,7 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NzButtonModule,
     NzInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NzGridModule,
+    NzCheckboxModule
   ]
 })
 export class LoginModule { }

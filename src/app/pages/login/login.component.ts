@@ -33,6 +33,12 @@ export class LoginComponent implements OnInit {
         this.validateForm.controls[i].updateValueAndValidity();
       }
     }
+    const name = this.validateForm.value.userName;
+    const res = this.authService.login(name, 123);
+    console.log(res);
+    if (res) {
+      this.router.navigateByUrl('/index/welcome');
+    }
   }
 
 }
