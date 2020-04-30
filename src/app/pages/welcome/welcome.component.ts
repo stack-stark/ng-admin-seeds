@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { packageInfo } from './package-info';
 
 @Component({
   selector: 'app-welcome',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomeComponent implements OnInit {
 
   constructor() { }
+
+  packageInfo = packageInfo;
 
   ngOnInit() {
   }

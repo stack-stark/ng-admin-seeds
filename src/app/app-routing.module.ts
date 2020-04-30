@@ -34,6 +34,14 @@ const routes: Routes = [
             path: 'todo',
             loadChildren: () => import('./pages/todo/todo.module').then((mod) => mod.TodoModule)
           },
+          {
+            path: 'ngx-gallery',
+            loadChildren: () => import('./pages/ngx-gallery/ngx-gallery.module').then((mod) => mod.NgxGalleryModule)
+          },
+          {
+            path: 'g2plot',
+            loadChildren: () => import('./pages/g2plot/g2plot.module').then((mod) => mod.G2plotModule)
+          },
         ]
       }
     ]
