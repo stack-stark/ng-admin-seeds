@@ -6,10 +6,6 @@ import { AuthGuard } from './core/auth/auth.guard';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/index/welcome' },
   {
-    path: 'error',
-    loadChildren: () => import('./pages/result-pages/result-pages.module').then((mod) => mod.ResultPagesModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then((mod) => mod.LoginModule)
   },
@@ -25,6 +21,10 @@ const routes: Routes = [
           {
             path: 'welcome',
             loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule)
+          },
+          {
+            path: 'error',
+            loadChildren: () => import('./pages/result-pages/result-pages.module').then((mod) => mod.ResultPagesModule)
           },
           {
             path: 'some',
