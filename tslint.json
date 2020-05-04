@@ -19,7 +19,7 @@
       true,
       "element",
       "app",
-      "kebab-case"
+      "stark"
     ],
     "import-blacklist": [
       true,

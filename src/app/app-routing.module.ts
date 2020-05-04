@@ -30,13 +30,53 @@ const routes: Routes = [
             path: 'error',
             loadChildren: () => import('./pages/general/result-pages/result-pages.module').then((mod) => mod.ResultPagesModule)
           },
+        ]
+      },
+      {
+        canActivateChild: [AuthGuard],
+        path: 'angular-primer',
+        children: [
           {
             path: 'todo-list',
-            loadChildren: () => import('./pages/angular-learning/todo-list/todo-list.module').then((mod) => mod.TodoListModule)
+            loadChildren: () => import('./pages/angular-primer/todo-list/todo-list.module').then((mod) => mod.TodoListModule)
           },
           {
+            path: 'pipe',
+            loadChildren: () => import('./pages/angular-primer/pipe/pipe.module').then((mod) => mod.PipeModule)
+          },
+          {
+            path: 'attribute-directives',
+            loadChildren: () => import('./pages/angular-primer/attribute-directives/attribute-directives.module')
+              .then((mod) => mod.AttributeDirectivesModule)
+          },
+          {
+            path: 'component-interaction',
+            loadChildren: () => import('./pages/angular-primer/component-interaction/component-interaction.module')
+              .then((mod) => mod.ComponentInteractionModule)
+          },
+          {
+            path: 'dom-operation',
+            loadChildren: () => import('./pages/angular-primer/dom-operation/dom-operation.module').then((mod) => mod.DomOperationModule)
+          },
+          {
+            path: 'dynamic-component',
+            loadChildren: () => import('./pages/angular-primer/dynamic-component/dynamic-component.module')
+              .then((mod) => mod.DynamicComponentModule)
+          },
+          {
+            path: 'structural-directives',
+            loadChildren: () => import('./pages/angular-primer/structural-directives/structural-directives.module')
+              .then((mod) => mod.StructuralDirectivesModule)
+          },
+        ]
+      },
+      {
+        canActivateChild: [AuthGuard],
+        path: 'common-components',
+        children: [
+          {
             path: 'ngrx',
-            loadChildren: () => import('./pages/angular-learning/ngrx/ngrx.module').then((mod) => mod.NgrxModule)
+            loadChildren: () => import('./pages/common-components/ngrx/ngrx.module').then((mod) => mod.NgrxModule)
           },
           {
             path: 'ngx-gallery',

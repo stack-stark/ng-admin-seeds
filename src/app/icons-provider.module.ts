@@ -11,7 +11,10 @@ import {
   FileDoneOutline,
   AreaChartOutline,
   PictureOutline,
-  ScheduleOutline
+  ScheduleOutline,
+  DatabaseOutline,
+  FileOutline,
+  ApartmentOutline
 } from '@ant-design/icons-angular/icons';
 
 const icons = [
@@ -24,7 +27,10 @@ const icons = [
   FileDoneOutline,
   AreaChartOutline,
   PictureOutline,
-  ScheduleOutline
+  ScheduleOutline,
+  DatabaseOutline,
+  FileOutline,
+  ApartmentOutline
 ];
 
 @NgModule({

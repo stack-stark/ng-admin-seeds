@@ -12,55 +12,144 @@ export const menuList: Array<Menu> = [
         routerLink: null,
         children: [
             {
-                name: 'todoList',
-                routerLink: '/index/todo-list',
+                name: '模板语法',
+                routerLink: '/index/angular-primer/todo-list',
                 children: null
             },
             {
-                name: 'ngrx',
-                routerLink: '/index/ngrx',
+                name: '组件交互',
+                routerLink: '/index/angular-primer/component-interaction',
+                children: null
+            },
+            {
+                name: '管道',
+                routerLink: '/index/angular-primer/pipe',
+                children: null
+            },
+            {
+                name: 'dom操作',
+                routerLink: '/index/angular-primer/dom-operation',
+                children: null
+            },
+            {
+                name: '动态组件',
+                routerLink: '/index/angular-primer/dynamic-component',
+                children: null
+            },
+            {
+                name: '属性型指令',
+                routerLink: '/index/angular-primer/attribute-directives',
+                children: null
+            },
+            {
+                name: '结构型指令',
+                routerLink: '/index/angular-primer/structural-directives',
                 children: null
             },
         ],
         nzIcon: 'schedule',
     },
     {
-        name: '结果页',
+        name: '通用页面',
         routerLink: null,
-        nzIcon: 'file-done',
-        open: false,
         children: [
             {
-                name: '404',
-                routerLink: '/index/error/404',
+                name: '登录',
+                routerLink: '/login',
                 children: null
             },
             {
-                name: '403',
-                routerLink: '/index/error/403',
+                name: '注册',
+                routerLink: '/register',
                 children: null
             },
             {
-                name: '500',
-                routerLink: '/index/error/500',
-                children: null
-            }, {
-                name: '详细错误页',
-                routerLink: '/index/error/error-feedback',
-                children: null
-            }
-        ]
+                name: '结果页',
+                routerLink: null,
+                nzIcon: 'file-done',
+                open: false,
+                children: [
+                    {
+                        name: '404',
+                        routerLink: '/index/error/404',
+                        children: null
+                    },
+                    {
+                        name: '403',
+                        routerLink: '/index/error/403',
+                        children: null
+                    },
+                    {
+                        name: '500',
+                        routerLink: '/index/error/500',
+                        children: null
+                    },
+                    {
+                        name: '详细错误页',
+                        routerLink: '/index/error/error-feedback',
+                        children: null
+                    }
+                ]
+            },
+        ],
+        nzIcon: 'file',
     },
     {
+        name: '二次封装组件',
+        routerLink: null,
+        children: [
+            {
+                name: '结构型指令',
+                routerLink: '/index/angular-primer/structural-directives',
+                children: null
+            }
+        ],
+        nzIcon: 'apartment',
+    },
+    // {
+    //     name: '结果页',
+    //     routerLink: null,
+    //     nzIcon: 'file-done',
+    //     open: false,
+    //     children: [
+    //         {
+    //             name: '404',
+    //             routerLink: '/index/error/404',
+    //             children: null
+    //         },
+    //         {
+    //             name: '403',
+    //             routerLink: '/index/error/403',
+    //             children: null
+    //         },
+    //         {
+    //             name: '500',
+    //             routerLink: '/index/error/500',
+    //             children: null
+    //         },
+    //         {
+    //             name: '详细错误页',
+    //             routerLink: '/index/error/error-feedback',
+    //             children: null
+    //         }
+    //     ]
+    // },
+    {
         name: '相册组件',
-        routerLink: '/index/ngx-gallery',
+        routerLink: '/index/common-components/ngx-gallery',
         children: null,
         nzIcon: 'picture',
     },
     {
         name: '图表',
-        routerLink: '/index/g2plot',
+        routerLink: '/index/common-components/g2plot',
         children: null,
         nzIcon: 'area-chart',
+    },
+    {
+        name: '状态管理器',
+        routerLink: '/index/common-components/ngrx',
+        children: null,
+        nzIcon: 'database',
     },
 ];

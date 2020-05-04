@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-forbidden',
   template: `
-    <app-result
+    <stark-result
       [title]="'Submission Failed'"
       [status]="'error'"
       [subTitle]="'Please check and modify the following information before resubmitting.'"
@@ -21,7 +21,7 @@ import { Component, OnInit } from '@angular/core';
           </p>
         </div>
       </div>
-    </app-result>
+    </stark-result>
     `
 })
 export class ErrorFeedbackComponent implements OnInit {

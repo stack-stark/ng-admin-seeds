@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { STableComponent } from './s-table.component';
+import { DomOperationComponent } from './dom-operation.component';
 
-describe('STableComponent', () => {
-  let component: STableComponent;
-  let fixture: ComponentFixture<STableComponent>;
+describe('DomOperationComponent', () => {
+  let component: DomOperationComponent;
+  let fixture: ComponentFixture<DomOperationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ STableComponent ]
+      declarations: [ DomOperationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(STableComponent);
+    fixture = TestBed.createComponent(DomOperationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

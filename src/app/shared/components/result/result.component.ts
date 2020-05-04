@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-result',
+  selector: 'stark-result',
   templateUrl: './result.component.html',
   styleUrls: ['./result.component.less']
 })
