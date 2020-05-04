@@ -27,6 +27,10 @@ const routes: Routes = [
             loadChildren: () => import('./pages/welcome/welcome.module').then(m => m.WelcomeModule)
           },
           {
+            path: 'project-log',
+            loadChildren: () => import('./pages/project-log/project-log.module').then(m => m.ProjectLogModule)
+          },
+          {
             path: 'error',
             loadChildren: () => import('./pages/general/result-pages/result-pages.module').then((mod) => mod.ResultPagesModule)
           },
