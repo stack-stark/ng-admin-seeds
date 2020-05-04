@@ -3,10 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-forbidden',
   template: `
-    <nz-result
-      nzTitle="Submission Failed"
-      nzStatus="error"
-      nzSubTitle="Please check and modify the following information before resubmitting."
+    <app-result
+      [title]="'Submission Failed'"
+      [status]="'error'"
+      [subTitle]="'Please check and modify the following information before resubmitting.'"
     >
       <div nz-result-content>
         <div class="desc">
@@ -21,11 +21,7 @@ import { Component, OnInit } from '@angular/core';
           </p>
         </div>
       </div>
-      <div nz-result-extra>
-        <button nz-button nzType="primary">Go Console</button>
-        <button nz-button>Buy Again</button>
-      </div>
-    </nz-result>
+    </app-result>
     `
 })
 export class ErrorFeedbackComponent implements OnInit {

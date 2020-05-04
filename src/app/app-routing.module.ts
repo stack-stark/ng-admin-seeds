@@ -7,7 +7,11 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/index/welcome' },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then((mod) => mod.LoginModule)
+    loadChildren: () => import('./pages/general/login/login.module').then((mod) => mod.LoginModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/general/register/register.module').then((mod) => mod.RegisterModule)
   },
   {
     path: 'index',
@@ -24,23 +28,27 @@ const routes: Routes = [
           },
           {
             path: 'error',
-            loadChildren: () => import('./pages/result-pages/result-pages.module').then((mod) => mod.ResultPagesModule)
+            loadChildren: () => import('./pages/general/result-pages/result-pages.module').then((mod) => mod.ResultPagesModule)
           },
           {
             path: 'some',
             loadChildren: () => import('./pages/some/some.module').then((mod) => mod.SomeModule)
           },
           {
-            path: 'todo',
-            loadChildren: () => import('./pages/todo/todo.module').then((mod) => mod.TodoModule)
+            path: 'todo-list',
+            loadChildren: () => import('./pages/angular-learning/todo-list/todo-list.module').then((mod) => mod.TodoListModule)
+          },
+          {
+            path: 'ngrx',
+            loadChildren: () => import('./pages/angular-learning/ngrx/ngrx.module').then((mod) => mod.NgrxModule)
           },
           {
             path: 'ngx-gallery',
-            loadChildren: () => import('./pages/ngx-gallery/ngx-gallery.module').then((mod) => mod.NgxGalleryModule)
+            loadChildren: () => import('./pages/common-components/ngx-gallery/ngx-gallery.module').then((mod) => mod.NgxGalleryModule)
           },
           {
             path: 'g2plot',
-            loadChildren: () => import('./pages/g2plot/g2plot.module').then((mod) => mod.G2plotModule)
+            loadChildren: () => import('./pages/common-components/g2plot/g2plot.module').then((mod) => mod.G2plotModule)
           },
         ]
       }

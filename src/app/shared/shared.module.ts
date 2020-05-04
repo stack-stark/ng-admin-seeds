@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EmptyCharacterPipe, TextOmittedPipe, TrustHtmlPipe, TrustResourceUrlPipe } from './pipe';
-import { STableComponent } from './components';
+import { STableComponent, ResultComponent } from './components';
+import { NzResultModule, NzButtonModule } from 'ng-zorro-antd';
 
 
 @NgModule({
@@ -11,16 +12,20 @@ import { STableComponent } from './components';
     TrustHtmlPipe,
     TrustResourceUrlPipe,
     STableComponent,
+    ResultComponent,
   ],
   imports: [
     CommonModule,
+    NzResultModule,
+    NzButtonModule
   ],
   exports: [
     EmptyCharacterPipe,
     TextOmittedPipe,
     TrustHtmlPipe,
     TrustResourceUrlPipe,
-    STableComponent
+    STableComponent,
+    ResultComponent
   ]
 })
 export class SharedModule { }

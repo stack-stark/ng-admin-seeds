@@ -2,7 +2,7 @@ import { Menu } from './menu.interface';
 
 export const menuList: Array<Menu> = [
     {
-        name: '首页',
+        name: 'welcome',
         routerLink: '/index/welcome',
         children: null,
         nzIcon: 'info-circle',
