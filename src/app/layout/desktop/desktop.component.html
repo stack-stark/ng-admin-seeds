@@ -2,8 +2,8 @@
     <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
       [nzTrigger]="null">
       <div class="sidebar-logo">
-        <a href="https://ng.ant.design/" target="_blank">
-          <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+        <a href="/" >
+          <img src="assets/svg/ng-seeds.svg" alt="logo">
           <h1>Angular种子项目</h1>
         </a>
       </div>
@@ -23,9 +23,9 @@
           </ng-container>
 
           <ng-container *ngIf="!item.children">
-            <li nz-menu-item nzMatchRouter >
+            <li nz-menu-item nzMatchRouter>
               <span><i nz-icon [nzType]="item.nzIcon" nzTheme="outline"></i></span>
-              <a routerLink="{{item['routerLink']}}">{{item['name']}}</a>
+              <a routerLink="{{item['routerLink']}}">{{!isCollapsed ?item['name'] : ''}}</a>
             </li> 
           </ng-container>
         </ng-container>

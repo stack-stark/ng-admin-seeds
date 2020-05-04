@@ -31,10 +31,6 @@ const routes: Routes = [
             loadChildren: () => import('./pages/general/result-pages/result-pages.module').then((mod) => mod.ResultPagesModule)
           },
           {
-            path: 'some',
-            loadChildren: () => import('./pages/some/some.module').then((mod) => mod.SomeModule)
-          },
-          {
             path: 'todo-list',
             loadChildren: () => import('./pages/angular-learning/todo-list/todo-list.module').then((mod) => mod.TodoListModule)
           },

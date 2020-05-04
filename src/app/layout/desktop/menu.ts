@@ -8,6 +8,23 @@ export const menuList: Array<Menu> = [
         nzIcon: 'info-circle',
     },
     {
+        name: 'angular入门',
+        routerLink: null,
+        children: [
+            {
+                name: 'todoList',
+                routerLink: '/index/todo-list',
+                children: null
+            },
+            {
+                name: 'ngrx',
+                routerLink: '/index/ngrx',
+                children: null
+            },
+        ],
+        nzIcon: 'schedule',
+    },
+    {
         name: '结果页',
         routerLink: null,
         nzIcon: 'file-done',
