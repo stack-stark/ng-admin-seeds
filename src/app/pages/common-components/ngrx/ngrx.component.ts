@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { Observable } from 'rxjs';
 import { AppStoreModule } from 'src/app/store/app-store.module';
 import { addBook, BookType, delBook, increment, decrement, reset } from 'src/app/store/actions';
 import { getBookList } from 'src/app/store/selectors/book.selector';
@@ -20,7 +19,6 @@ export class NgrxComponent implements OnInit {
 
   constructor(private store: Store<AppStoreModule>) {
     this.store.pipe(select('book' as any), select(getBookList)).subscribe(item => {
-      console.log(item, '当前的书籍');
       this.bookList = item;
     });
     this.store.pipe(select('count' as any), select(getCounter)).subscribe(item => {
@@ -33,7 +31,10 @@ export class NgrxComponent implements OnInit {
 
   }
 
-  public submit(): void {
+  /**
+   * commit
+   */
+  submit(): void {
     if (this.bookName && this.author && this.price) {
       this.store.dispatch(addBook({ book: { bookName: this.bookName, author: this.author, price: this.price, createAt: Date.now() } }));
       this.bookName = '';
@@ -42,18 +43,31 @@ export class NgrxComponent implements OnInit {
     }
   }
 
+  /**
+   * 删除
+   * @param book 
+   */
   public delBook(book: BookType): void {
     this.store.dispatch(delBook({ book }));
   }
 
+  /**
+   * 加
+   */
   increment() {
     this.store.dispatch(increment());
   }
 
+  /**
+   * 减
+   */
   decrement() {
     this.store.dispatch(decrement());
   }
 
+  /**
+   * 重置
+   */
   reset() {
     this.store.dispatch(reset());
   }

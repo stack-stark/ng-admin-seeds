@@ -19,7 +19,7 @@ export const menuList: Array<Menu> = [
         children: [
             {
                 name: '模板语法',
-                routerLink: '/index/angular-primer/todo-list',
+                routerLink: '/index/angular-primer/template-syntax',
                 children: null
             },
             {
@@ -30,6 +30,11 @@ export const menuList: Array<Menu> = [
             {
                 name: '管道',
                 routerLink: '/index/angular-primer/pipe',
+                children: null
+            },
+            {
+                name: '表单',
+                routerLink: '/index/angular-primer/form',
                 children: null
             },
             {

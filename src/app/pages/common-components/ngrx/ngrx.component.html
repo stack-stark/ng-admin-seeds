@@ -1,45 +1,60 @@
-<table class="table table-striped table-bordered">
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>作者</th>
-        <th>书名</th>
-        <th>价格</th>
-        <th>创建时间</th>
-        <th>操作</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let book of bookList; let i = index;">
-        <td>{{i+1}}</td>
-        <td>{{book.author}}</td>
-        <td>{{book.bookName}}</td>
-        <td>{{book.price}}</td>
-        <td>{{book.createAt | date:'yyyy-MM-dd HH:mm:ss'}}</td>
-        <td>
-          <button (click)="delBook(book)" class="btn btn-danger">删除</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <div>
-    <div>书名: <input type="text" [(ngModel)]="bookName" /></div>
-    <div>作者: <input type="text" [(ngModel)]="author" /></div>
-    <div>价格: <input type="text" [(ngModel)]="price" /></div>
-    <div>
-      <button type="button" (click)="submit()">提交</button>
-    </div>
+<div nz-row>
+  <div nz-col nzSpan="24">
+    <nz-table #basicTable [nzData]="bookList">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>作者</th>
+          <th>书名</th>
+          <th>价格</th>
+          <th>创建时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of bookList; let i = index;">
+          <td>{{i+1}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.bookName}}</td>
+          <td>{{book.price}}</td>
+          <td>{{book.createAt | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+          <td>
+            <a nz-popconfirm nzPopconfirmTitle="是否删除该条数据?" nzPopconfirmPlacement="bottom"
+              (nzOnConfirm)="delBook(book)">删除</a>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
   </div>
-  
-  
-  <br>
-  
-  <button id="increment" (click)="increment()">Increment</button>
-  
-  <div>Current Count: {{ count }}</div>
-  
-  <button id="decrement" (click)="decrement()">Decrement</button>
-  
-  <button id="reset" (click)="reset()">Reset Counter</button>
-  
+</div>
+<div nz-row style="margin-top: 30px;">
+  <div nz-col nzSpan="4">
+    <div>书名: <input nz-input type="text" [(ngModel)]="bookName" /></div>
+  </div>
+  <div nz-col nzSpan="4" nzOffset="1">
+    <div>作者: <input nz-input type="text" [(ngModel)]="author" /></div>
+  </div>
+  <div nz-col nzSpan="4" nzOffset="1">
+    <div>价格: <input nz-input type="number" [(ngModel)]="price" /></div>
+  </div>
+  <div nz-col nzSpan="4" style="margin-top: 20px;" nzOffset="1">
+    <button nz-button nzType="primary" (click)="submit()">提交</button>
+  </div>
+</div>
+
+<div nz-row style="margin-top: 30px;">
+  <nz-divider></nz-divider>
+  <h4>计数例子</h4>
+  <div nz-col nzSpan="24" style="margin-bottom: 15px;">
+    <div>Current Count: {{ count }}</div>
+  </div>
+  <div nz-col nzSpan="2">
+    <button id="increment" nz-button nzType="primary" (click)="increment()">Increment</button>
+  </div>
+  <div nz-col nzSpan="2">
+    <button id="decrement" nz-button nzType="default" (click)="decrement()">Decrement</button>
+  </div>
+  <div nz-col nzSpan="2">
+    <button id="reset" nz-button nzType="primary" nzDanger (click)="reset()">Reset Counter</button>
+  </div>
+</div>

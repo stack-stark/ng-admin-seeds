@@ -1,1 +1,9 @@
-<p>todo-list works!</p>
+<ng-container *ngFor="let item of list;let idx = index;">
+    <div class="list-item" (click)="printData(item)">
+      <span [ngStyle]="{'color': item.id == 0?'red':'gray'}">{{item.id}}</span>
+      <span [ngClass]="{'item-name': idx == 1}">{{item.name}}</span>
+      <span style="color: red">{{item.age}}</span>
+      <span *ngIf="item.id == 'a007'">Good luck</span>
+      <span>{{item.create_time | date: 'yyyy-mm-dd hh:mm:ss'}}</span>
+    </div>
+  </ng-container>

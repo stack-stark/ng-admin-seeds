@@ -9,7 +9,7 @@ import { packageInfo } from './package-info';
 export class WelcomeComponent implements OnInit {
 
   constructor() { }
-
+  code = `<span>123</span>`;
   packageInfo = packageInfo;
 
   ngOnInit() {

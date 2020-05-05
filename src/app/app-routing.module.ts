@@ -41,12 +41,17 @@ const routes: Routes = [
         path: 'angular-primer',
         children: [
           {
-            path: 'todo-list',
-            loadChildren: () => import('./pages/angular-primer/todo-list/todo-list.module').then((mod) => mod.TodoListModule)
+            path: 'template-syntax',
+            loadChildren: () => import('./pages/angular-primer/template-syntax/template-syntax.module')
+            .then((mod) => mod.TemplateSyntaxModule)
           },
           {
             path: 'pipe',
             loadChildren: () => import('./pages/angular-primer/pipe/pipe.module').then((mod) => mod.PipeModule)
+          },
+          {
+            path: 'form',
+            loadChildren: () => import('./pages/angular-primer/form/form.module').then((mod) => mod.FormModule)
           },
           {
             path: 'attribute-directives',

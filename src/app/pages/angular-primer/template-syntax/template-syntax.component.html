@@ -1,0 +1,39 @@
+<ul nz-list [nzDataSource]="list" nzBordered nzSize="large">
+    <nz-list-header>模板语法</nz-list-header>
+    <ng-container *ngFor="let item of list;let idx = index;">
+    <li nz-list-item nzNoFlex>
+        <ul nz-list-item-actions>
+        <nz-list-item-action>
+            <a nz-popconfirm nzPopconfirmTitle="是否删除该条?" nzPopconfirmPlacement="bottom"
+            (nzOnConfirm)="deleteData(item)">delete</a>
+        </nz-list-item-action>
+        <nz-list-item-action>
+            <a (click)="printData(item)">print</a>
+        </nz-list-item-action>
+        </ul>
+        <span class="title">id</span>
+        <span [ngStyle]="{'color': item.id == 0?'red':'gray'}">{{item.id}}</span>
+        <span class="title">。我是</span>
+        <span [ngClass]="{'item-name': idx == 1}">{{item.name}}</span>
+        <span class="title">。今年:</span>
+        <span style="color: red">{{item.age}}</span>
+        <span class="title">岁。</span>
+        <span class="title" *ngIf="item.id == 'a007'">因为我的id是a007,所以我</span>
+        <span *ngIf="item.id == 'a007'">够幸运。</span>
+        <span class="title">本条创建于</span>
+        <span>{{item.createTime | date: 'yyyy-mm-dd hh:mm:ss'}}</span>
+    </li>
+    </ng-container>
+</ul>
+<nz-divider></nz-divider>
+<nz-alert nzType="info" nzMessage="template-syntax.component.html" [nzDescription]="temp"></nz-alert>
+<ng-template #temp>
+    <p><code>ng-container</code> 是 Angular 所定义的一个特殊 tag,可以在其标签内进行运算.处理,而不会影响到页面结构</p>
+    <p><code>*ngFor="let item of list;let idx = index;"</code>这是循环渲染,被循环对象为list,idx则为list的index</p>
+    <p><code>(click)="printData(item)"</code> 事件绑定,其中item为传递的参数</p>
+    <p><code>[ngStyle]</code>,<code>[ngClass]</code>则是内联样式和css选择器的条件绑定</p>
+    <p><code>*ngIf="item.id == 'a007'"</code> *ngIf是条件渲染,条件成立则渲染,反之则销毁</p>
+    <p><code>item.create_time | date: 'yyyy-mm-dd hh:mm:ss'</code> '|' 是管道符,date是angular内置管道,格式化时间</p>
+</ng-template>
+<nz-divider></nz-divider>
+<stark-code-show></stark-code-show>

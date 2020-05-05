@@ -29,7 +29,7 @@
     "lodash": "^4.17.15",
     "ng-zorro-antd": "^9.1.0",
     "ngx-gallery": "^5.10.0",
-    "ngx-highlightjs": "^4.1.0-beta",
+    "ngx-highlightjs": "^4.0.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

@@ -12,4 +12,12 @@ export class CodeShowComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  code = `import { HighlightModule } from 'ngx-highlightjs';
+ 
+  @NgModule({
+    imports: [
+      HighlightModule
+    ]
+  })
+  export class AppModule { }`
 }
