@@ -117,45 +117,48 @@ export const menuList: Array<Menu> = [
         ],
         nzIcon: 'apartment',
     },
-    // {
-    //     name: '结果页',
-    //     routerLink: null,
-    //     nzIcon: 'file-done',
-    //     open: false,
-    //     children: [
-    //         {
-    //             name: '404',
-    //             routerLink: '/index/error/404',
-    //             children: null
-    //         },
-    //         {
-    //             name: '403',
-    //             routerLink: '/index/error/403',
-    //             children: null
-    //         },
-    //         {
-    //             name: '500',
-    //             routerLink: '/index/error/500',
-    //             children: null
-    //         },
-    //         {
-    //             name: '详细错误页',
-    //             routerLink: '/index/error/error-feedback',
-    //             children: null
-    //         }
-    //     ]
-    // },
-    {
-        name: '相册组件',
-        routerLink: '/index/common-components/ngx-gallery',
-        children: null,
-        nzIcon: 'picture',
-    },
     {
         name: '图表',
         routerLink: '/index/common-components/g2plot',
-        children: null,
         nzIcon: 'area-chart',
+        children: [
+            {
+                name: 'Line-折线图',
+                routerLink: '/index/common-components/g2plot',
+                children: null
+            },
+            {
+                name: 'Area-面积图',
+                routerLink: '/index/common-components/g2plot',
+                children: null
+            },
+            {
+                name: 'Column-柱状图',
+                routerLink: '/index/common-components/g2plot',
+                children: null
+            },
+            {
+                name: 'Bar-基础条形图',
+                routerLink: '/index/common-components/g2plot',
+                children: null
+            },
+            {
+                name: 'Pie-饼图',
+                routerLink: '/index/common-components/g2plot',
+                children: null
+            },
+            {
+                name: 'Gauge-仪表盘',
+                routerLink: '/index/common-components/g2plot',
+                children: null
+            }
+        ],
+    },
+    {
+        name: '图片预览',
+        routerLink: '/index/common-components/ngx-gallery',
+        children: null,
+        nzIcon: 'picture',
     },
     {
         name: '状态管理器',
