@@ -86,5 +86,5 @@ export class DomOperationComponent implements AfterContentInit {
   private removeStyle(el: any, style: string, flags?: RendererStyleFlags2): void { }
   private setProperty(el: any, name: string, value: any): void { }
   private setValue(node: any, value: string): void { }
-  private listen(target: any, eventName: string, callback: (event: any) => boolean | void): () => { };
+  // private listen(target: any, eventName: string, callback: (event: any) => boolean | void): () => { };
 }
