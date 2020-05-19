@@ -1,13 +1,13 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-g2plot',
-  templateUrl: './g2plot.component.html',
-  styleUrls: ['./g2plot.component.less']
+  selector: 'app-g2plot-bar',
+  templateUrl: './g2plot-bar.component.html',
+  styleUrls: ['./g2plot-bar.component.less']
 })
-export class G2plotComponent implements OnInit {
+export class G2plotBarComponent implements OnInit {
 
- data = [
+  data = [
     { year: '1951 年', sales: 38 },
     { year: '1952 年', sales: 52 },
     { year: '1956 年', sales: 61 },
@@ -23,12 +23,10 @@ export class G2plotComponent implements OnInit {
     // width: 200,
     // height: 200
   };
-
-
-  constructor() {
   
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
+
 }

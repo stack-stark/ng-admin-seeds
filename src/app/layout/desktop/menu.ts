@@ -7,12 +7,12 @@ export const menuList: Array<Menu> = [
         children: null,
         nzIcon: 'info-circle',
     },
-    {
-        name: '项目日志',
-        routerLink: '/index/project-log',
-        children: null,
-        nzIcon: 'snippets',
-    },
+    // {
+    //     name: '项目日志',
+    //     routerLink: '/index/project-log',
+    //     children: null,
+    //     nzIcon: 'snippets',
+    // },
     {
         name: 'angular入门',
         routerLink: null,
@@ -119,37 +119,37 @@ export const menuList: Array<Menu> = [
     },
     {
         name: '图表',
-        routerLink: '/index/common-components/g2plot',
+        routerLink: null,
         nzIcon: 'area-chart',
         children: [
             {
                 name: 'Line-折线图',
-                routerLink: '/index/common-components/g2plot',
+                routerLink: '/index/common-components/g2plot/line',
                 children: null
             },
             {
                 name: 'Area-面积图',
-                routerLink: '/index/common-components/g2plot',
+                routerLink: '/index/common-components/g2plot/area',
                 children: null
             },
             {
                 name: 'Column-柱状图',
-                routerLink: '/index/common-components/g2plot',
+                routerLink: '/index/common-components/g2plot/column',
                 children: null
             },
             {
                 name: 'Bar-基础条形图',
-                routerLink: '/index/common-components/g2plot',
+                routerLink: '/index/common-components/g2plot/bar',
                 children: null
             },
             {
                 name: 'Pie-饼图',
-                routerLink: '/index/common-components/g2plot',
+                routerLink: '/index/common-components/g2plot/pie',
                 children: null
             },
             {
                 name: 'Gauge-仪表盘',
-                routerLink: '/index/common-components/g2plot',
+                routerLink: '/index/common-components/g2plot/gauge',
                 children: null
             }
         ],
